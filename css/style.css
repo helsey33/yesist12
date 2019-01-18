@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
+
+header {
+  height: 100vh;
+}
+
+header .glide__track {
+  height: 100%;
+}
+
+header .glide {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+}
+
+header .glide .glide__slides {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+header .glide .glide__slides .glide__slide:nth-child(1) {
+  background: url("../img/3.jpeg") no-repeat center center;
+  background-size: cover;
+}
+
+header .glide .glide__slides .glide__slide:nth-child(2) {
+  background: url("../img/2.jpeg") no-repeat center center;
+  background-size: cover;
+}
+
+header .glide .glide__slides .glide__slide:nth-child(3) {
+  background: url("../img/1.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+header .glide .glide__slides .glide__slide:nth-child(4) {
+  background: url("../img/4.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+header .glide .glide__bullets {
+  position: relative;
+  bottom: 4em;
+  text-align: center;
+  z-index: 5;
+}
+
+header .glide .glide__bullets .glide__bullet {
+  height: 15px;
+  width: 15px;
+  background: #36a5c1;
+  border-radius: 50%;
+  border: 0;
+  margin: 0 20px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+header .glide .glide__bullets .glide__bullet--active {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+header .content {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: rgba(14, 22, 59, 0.7);
+}
+
+header .content nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .content nav .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .content nav .left #logo {
+  width: 250px;
+}
+
+header .content nav .left .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .content nav .left .details p {
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+header .content nav .right {
+  margin-right: 30px;
+}
+
+header .content nav .right button {
+  border: 0;
+  margin: 0 10px;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Lato";
+}
+
+header .content nav .right .read {
+  border: solid 3px #36a5c1;
+  color: #36a5c1;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+header .content nav .right .read:hover {
+  color: #fff;
+  background: #36a5c1;
+}
+
+header .content nav .right .register {
+  background: #36a5c1;
+  color: #fff;
+}
+
+header .content .middle {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+
+header .content .middle .semi_circ {
+  height: 200px;
+  width: 100px;
+  background: #36a5c1;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+}
+
+header .content .middle .heading .main {
+  color: #fff;
+  font-size: 25px;
+  line-height: 25px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+header .content .middle .heading .sub {
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+header .content .middle .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  z-index: 2;
+}
+
+header .content .middle .cta button {
+  border: 0;
+  margin: 0 10px;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Lato";
+  width: 100%;
+  background: #36a5c1;
+  color: #fff;
+}
+
+header .content .middle svg {
+  -webkit-transform: scale(2.5) translate(-10%, -10%);
+          transform: scale(2.5) translate(-10%, -10%);
+}
+
+header .content .middle svg g {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+header .content .bottom {
+  height: 10%;
+}
+/*# sourceMappingURL=style.css.map */
