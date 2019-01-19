@@ -71,6 +71,10 @@ header .glide .glide__bullets .glide__bullet {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
+header .glide .glide__bullets .glide__bullet:focus {
+  outline: none;
+}
+
 header .glide .glide__bullets .glide__bullet--active {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
@@ -114,6 +118,7 @@ header .content nav .left {
 
 header .content nav .left #logo {
   width: 250px;
+  height: 150px;
 }
 
 header .content nav .left .details {
@@ -240,5 +245,39 @@ header .content .middle svg g {
 
 header .content .bottom {
   height: 10%;
+}
+
+@media (max-width: 1000px) {
+  .content nav .left p {
+    font-size: 15px !important;
+  }
+  .content nav .right button {
+    display: none;
+  }
+  .content .middle {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 80%;
+    padding: 20px;
+  }
+  .content .middle .semi_circ {
+    display: none;
+  }
+  .content .middle .heading .main {
+    font-size: 23px !important;
+  }
+  .content .middle .heading .sub {
+    font-size: 15px !important;
+  }
+  .content .middle svg {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
