@@ -8,6 +8,7 @@ new Glide(".glide", {
 window.addEventListener("load", () => {
   patternAnimation();
   menuAnimation();
+  hamburgerPos();
 });
 
 //Media query
@@ -146,6 +147,88 @@ function WidthChange(mq) {
       handler: trackAnimation3,
       offset: "50%"
     });
+
+    const trackAnimation4 = () => {
+      anime
+        .timeline({
+          easing: "easeOutExpo"
+        })
+        .add({
+          targets: ".track4 .img_container",
+          scale: [1.2, 1],
+          duration: 2000
+        })
+        .add(
+          {
+            targets: ".track4 .content",
+            translateY: [50, 0],
+            opacity: [0, 1],
+            duration: 2000
+          },
+          "-=2000"
+        );
+      trackWaypoint4.disable();
+    };
+    var trackWaypoint4 = new Waypoint({
+      element: document.querySelector(".track4"),
+      handler: trackAnimation4,
+      offset: "50%"
+    });
+
+    const cmAnimation1 = () => {
+      anime({
+        targets:
+          "#committee .group1 .mem_container .member, .mem_container .details",
+        opacity: [0, 1],
+        scale: [1.1, 1],
+        easing: "easeOutExpo",
+        duration: 1000,
+        delay: anime.stagger(100)
+      });
+      committeeWaypoint1.disable();
+    };
+
+    var committeeWaypoint1 = new Waypoint({
+      element: document.querySelector(".group1"),
+      handler: cmAnimation1,
+      offset: "50%"
+    });
+
+    const cmAnimation2 = () => {
+      anime({
+        targets: "#committee .group2 .mem_container .member",
+        opacity: [0, 1],
+        scale: [1.1, 1],
+        easing: "easeOutExpo",
+        duration: 1000,
+        delay: anime.stagger(100)
+      });
+      committeeWaypoint2.disable();
+    };
+
+    var committeeWaypoint2 = new Waypoint({
+      element: document.querySelector(".group2"),
+      handler: cmAnimation2,
+      offset: "50%"
+    });
+
+    const ctAnimation = () => {
+      anime({
+        targets: "#helpline .contact",
+        opacity: [0, 1],
+        scale: [1.05, 1],
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: anime.stagger(100)
+      });
+      contactAnimation.disable();
+    };
+
+    var contactAnimation = new Waypoint({
+      element: document.querySelector("#helpline"),
+      handler: ctAnimation,
+      offset: "50%"
+    });
   }
 }
 
@@ -164,6 +247,19 @@ const patternAnimation = () => {
 const menuAnimation = () => {
   let active = false;
   const ham = document.querySelector(".hamburger");
+  const slideUp = () => {
+    ham.classList.remove("active");
+    anime({
+      targets: document.querySelector(".menu"),
+      top: "-110%",
+      duration: 1000,
+      easing: "easeInQuad",
+      complete: () => {
+        active = !active;
+        document.querySelector("body").style.overflow = "visible";
+      }
+    });
+  };
   ham.onclick = () => {
     if (!active) {
       ham.classList.add("active");
@@ -174,19 +270,41 @@ const menuAnimation = () => {
         easing: "easeInQuad",
         complete: () => {
           active = !active;
+          document.querySelector("body").style.overflow = "hidden";
         }
       });
     } else {
-      ham.classList.remove("active");
-      anime({
-        targets: document.querySelector(".menu"),
-        top: "-110%",
+      slideUp();
+    }
+  };
+
+  document.querySelectorAll(".menu li").forEach(ele => {
+    ele.onclick = slideUp;
+  });
+};
+
+const hamburgerPos = () => {
+  let dir = true;
+  let hamAnime;
+  window.onscroll = () => {
+    const ham = document.querySelector(".hamburger");
+    if (window.pageYOffset >= 400 && dir) {
+      ham.style.position = "fixed";
+      ham.style.height = "50px";
+      ham.style.width = "50px";
+      ham.style.right = "-100px";
+      hamAnime = anime({
+        targets: ham,
+        top: "20px",
+        right: "10px",
         duration: 1000,
-        easing: "easeInQuad",
-        complete: () => {
-          active = !active;
-        }
+        easing: "easeOutExpo"
       });
+      dir = !dir;
+    } else if (window.pageYOffset <= 400 && !dir) {
+      ham.style.position = "static";
+      ham.style.height = "100%";
+      dir = !dir;
     }
   };
 };
