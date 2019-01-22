@@ -104,8 +104,10 @@
     }
   }
   #track {
+    margin: 0 !important;
     .track {
       grid-template-columns: 1fr !important;
+
       .left {
         height: 50vh;
         .container {
