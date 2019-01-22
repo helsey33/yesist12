@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
-@import url("https://fonts.googleapis.com/css?family=Cinzel:400,700");
+@import url("https://fonts.googleapis.com/css?family=Cinzel:400,700,900");
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -526,11 +526,11 @@ header .content .bottom {
 }
 
 #track .tracks .track .left .container {
-  height: 70%;
-  width: 70%;
+  height: 60%;
+  width: 60%;
   overflow: hidden;
-  -webkit-box-shadow: 0px 10px 35px -2px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 10px 35px -2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 25px -2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 10px 25px -2px rgba(0, 0, 0, 0.5);
 }
 
 #track .tracks .track .left .container .img_container {
@@ -561,15 +561,17 @@ header .content .bottom {
 }
 
 #track .tracks .track .right .content .topic {
-  font-size: 65px;
+  font-size: 45px;
   text-transform: uppercase;
   letter-spacing: 5px;
   margin-bottom: 30px;
   position: relative;
+  font-family: "Cinzel";
+  font-weight: 700;
 }
 
 #track .tracks .track .right .content .details {
-  font-size: 25px;
+  font-size: 20px;
   opacity: 0.7;
   letter-spacing: 3px;
 }
@@ -578,7 +580,7 @@ header .content .bottom {
   margin: 50px;
   text-align: center;
   width: 30%;
-  padding: 15px 25px;
+  padding: 13px 20px;
   text-transform: uppercase;
   font-weight: 700;
   color: #36a5c1;
