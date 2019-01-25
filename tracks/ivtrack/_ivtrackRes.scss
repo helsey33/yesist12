@@ -1,0 +1,95 @@
+@media (max-width: 1000px) {
+  .menu {
+    grid-template-columns: 1fr;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .line {
+      height: 2px;
+      width: 80vw;
+      top: 55%;
+      left: 50%;
+    }
+    .menu_list {
+      ul {
+        width: 100%;
+        li {
+          margin: 20px 0 !important;
+          a {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+  #home {
+    height: 200vh;
+    .content {
+      nav {
+        .left {
+          p {
+            font-size: 15px !important;
+          }
+        }
+        .right {
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+    .preface {
+      width: 95%;
+      top: -250px;
+      padding: 20px 10px !important;
+      .inner {
+        width: 95%;
+        .heading {
+          font-size: 35px;
+        }
+        .quote {
+          font-size: 20px;
+          span {
+            font-size: 18px;
+          }
+        }
+        .para {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  #committee {
+    height: 400vh;
+    .heading {
+      font-size: 25px;
+    }
+    .container {
+      .card {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        .right {
+          .bio {
+            .name {
+              font-size: 20px;
+              margin: 10px 0;
+            }
+            .details {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+      .card1 {
+        border-left: 10px solid;
+        border-bottom: 10px solid;
+      }
+      .card2 {
+        border-right: 10px solid;
+        border-bottom: 10px solid;
+      }
+      .card3 {
+        border-left: 10px solid;
+      }
+    }
+  }
+}

@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Cinzel:400,700,900");
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2f2f2f;
+  border-radius: 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+  scroll-behavior: smooth;
+  color: #2f2f2f;
+}
+
+.menu {
+  background: url("/img/menu-bg.png") no-repeat center center;
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  top: -110%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 49% 2% 49%;
+      grid-template-columns: 49% 2% 49%;
+}
+
+.menu .line {
+  height: 80vh;
+  width: 2px;
+  background: #36a5c1;
+}
+
+.menu .menu_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .menu_list ul li {
+  margin: 50px;
+  list-style: none;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.menu .menu_list ul li:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.menu .menu_list ul li a {
+  text-decoration: none;
+  color: #36a5c1;
+  font-family: "Lato";
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.menu .menu_list .read {
+  border: 0;
+  padding: 20px 40px;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Lato";
+  background: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed));
+  background: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%);
+  color: #fff;
+}
+
+header {
+  height: 140vh;
+}
+
+header .content {
+  height: 80vh;
+  width: 100%;
+  background: url("ivtrack.jpg") no-repeat top center;
+  background-size: cover;
+  position: relative;
+}
+
+header .content nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .content nav .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .content nav .left #logo {
+  width: 250px;
+  height: 150px;
+}
+
+header .content nav .left .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .content nav .left .details p {
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+header .content nav .right {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .content nav .right a {
+  z-index: 5;
+}
+
+header .content nav .right button {
+  border: 0;
+  padding: 20px 40px;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Lato";
+  z-index: 5;
+}
+
+header .content nav .right .read {
+  border: solid 3px #36a5c1;
+  color: #36a5c1;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+header .content nav .right .read:hover {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed));
+  background: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%);
+}
+
+header .content nav .right .register {
+  background: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed));
+  background: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%);
+  color: #fff;
+}
+
+header .content nav .right .hamburger, header .content nav .right .active {
+  z-index: 9999;
+  cursor: pointer;
+}
+
+header .content nav .right .hamburger div, header .content nav .right .active div {
+  position: static;
+  height: 2px;
+  margin: 8px;
+  width: 30px;
+  border-radius: 2px;
+  background: #36a5c1;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+header .content nav .right .active div:nth-child(1) {
+  -webkit-transform: rotate(45deg) translateY(13px);
+          transform: rotate(45deg) translateY(13px);
+}
+
+header .content nav .right .active div:nth-child(2) {
+  opacity: 0;
+}
+
+header .content nav .right .active div:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translateY(-13px);
+          transform: rotate(-45deg) translateY(-13px);
+}
+
+header .preface {
+  height: auto;
+  width: 85%;
+  margin: auto;
+  position: relative;
+  top: -150px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 20px;
+}
+
+header .preface .inner {
+  height: 85%;
+  width: 85%;
+}
+
+header .preface .inner .heading {
+  font-family: "Cinzel";
+  font-weight: 700;
+  text-align: center;
+  font-size: 45px;
+}
+
+header .preface .inner .line {
+  margin: auto;
+  height: 3px;
+  width: 30%;
+  background: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed));
+  background: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%);
+}
+
+header .preface .inner .quote {
+  margin: 10px 0;
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+header .preface .inner .quote span {
+  font-size: 20px;
+}
+
+header .preface .inner .para {
+  font-size: 20px;
+  margin: 30px 0;
+  text-align: justify;
+}
+
+#committee {
+  height: 200vh;
+  margin-bottom: 400px;
+}
+
+#committee .heading {
+  margin: 20px 0;
+  font-family: "Cinzel";
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+#committee .container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+
+#committee .container .card {
+  width: 100%;
+  height: 40%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+#committee .container .card .left .img_container {
+  height: 100%;
+  width: 100%;
+}
+
+#committee .container .card .left .img1 {
+  background: url("/img/committee/divyanshu.png") no-repeat center center;
+  background-size: cover;
+}
+
+#committee .container .card .left .img2 {
+  background: url("/img/committee/rossPerkin.png") no-repeat center center;
+  background-size: cover;
+}
+
+#committee .container .card .left .img3 {
+  background: url("/img/committee/ajayKumar.png") no-repeat center center;
+  background-size: cover;
+}
+
+#committee .container .card .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#committee .container .card .right .bio {
+  height: 95%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#committee .container .card .right .bio .name {
+  font-size: 30px;
+}
+
+#committee .container .card .right .bio .details {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-align: justify;
+  color: #7c7c7c;
+}
+
+#committee .container .card .right .bio .contact {
+  margin: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#committee .container .card .right .bio .contact img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+#committee .container .card1 {
+  border-left: 20px solid;
+  border-bottom: 20px solid;
+  -o-border-image: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%) 10% stretch;
+     border-image: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed)) 10% stretch;
+     border-image: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%) 10% stretch;
+}
+
+#committee .container .card2 {
+  border-right: 20px solid;
+  border-bottom: 20px solid;
+  -o-border-image: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%) 10% stretch;
+     border-image: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed)) 10% stretch;
+     border-image: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%) 10% stretch;
+}
+
+#committee .container .card3 {
+  border-left: 20px solid;
+  -o-border-image: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%) 10% stretch;
+     border-image: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed)) 10% stretch;
+     border-image: linear-gradient(to right, #2193b0 0%, #6dd5ed 100%) 10% stretch;
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .menu .line {
+    height: 2px;
+    width: 80vw;
+    top: 55%;
+    left: 50%;
+  }
+  .menu .menu_list ul {
+    width: 100%;
+  }
+  .menu .menu_list ul li {
+    margin: 20px 0 !important;
+  }
+  .menu .menu_list ul li a {
+    font-size: 25px;
+  }
+  #home {
+    height: 200vh;
+  }
+  #home .content nav .left p {
+    font-size: 15px !important;
+  }
+  #home .content nav .right button {
+    display: none;
+  }
+  #home .preface {
+    width: 95%;
+    top: -250px;
+    padding: 20px 10px !important;
+  }
+  #home .preface .inner {
+    width: 95%;
+  }
+  #home .preface .inner .heading {
+    font-size: 35px;
+  }
+  #home .preface .inner .quote {
+    font-size: 20px;
+  }
+  #home .preface .inner .quote span {
+    font-size: 18px;
+  }
+  #home .preface .inner .para {
+    font-size: 18px;
+  }
+  #committee {
+    height: 400vh;
+  }
+  #committee .heading {
+    font-size: 25px;
+  }
+  #committee .container .card {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  #committee .container .card .right .bio .name {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  #committee .container .card .right .bio .details {
+    font-size: 0.8rem;
+  }
+  #committee .container .card1 {
+    border-left: 10px solid;
+    border-bottom: 10px solid;
+  }
+  #committee .container .card2 {
+    border-right: 10px solid;
+    border-bottom: 10px solid;
+  }
+  #committee .container .card3 {
+    border-left: 10px solid;
+  }
+}
+/*# sourceMappingURL=style.css.map */
