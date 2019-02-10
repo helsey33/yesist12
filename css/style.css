@@ -91,6 +91,26 @@ body {
   color: #fff;
 }
 
+.menu .menu_list .arrow_svg {
+  width: 25px;
+  color: #fff;
+}
+
+.menu .track_sub,
+.menu .team_sub {
+  display: none;
+  opacity: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.menu .external {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 header {
   height: 100vh;
 }
@@ -869,6 +889,10 @@ header .content .bottom {
   }
   .menu .menu_list ul li a {
     font-size: 25px;
+  }
+  .menu .menu_list ul .arrow_svg {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   #home .content nav .left p {
     font-size: 15px !important;

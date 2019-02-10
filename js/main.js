@@ -9,6 +9,18 @@ window.addEventListener("load", () => {
   patternAnimation();
   menuAnimation();
   hamburgerPos();
+  document.querySelector(".menu .track_link").onclick = () => {
+    subTrackAnimation(true);
+  };
+  document.querySelector(".menu #go_back_track").onclick = () => {
+    subTrackAnimation(false);
+  };
+  document.querySelector(".menu .team_link").onclick = () => {
+    subTeamAnimation(true);
+  };
+  document.querySelector(".menu #go_back_team").onclick = () => {
+    subTeamAnimation(false);
+  };
 });
 
 //Media query
@@ -277,10 +289,6 @@ const menuAnimation = () => {
       slideUp();
     }
   };
-
-  document.querySelectorAll(".menu li").forEach(ele => {
-    ele.onclick = slideUp;
-  });
 };
 
 const hamburgerPos = () => {
@@ -307,4 +315,104 @@ const hamburgerPos = () => {
       dir = !dir;
     }
   };
+};
+
+const subTrackAnimation = dir => {
+  if (dir) {
+    anime
+      .timeline({
+        easing: "easeOutExpo"
+      })
+      .add({
+        targets: ".menu .external",
+        opacity: [1, 0],
+        translateX: "40px",
+        complete: () => {
+          document.querySelector(".external").style.display = "none";
+        }
+      })
+      .add({
+        targets: ".menu .track_sub",
+        opacity: [0, 1],
+        translateX: ["40px", 0],
+        begin: () => {
+          document.querySelector(".track_sub").style.display = "block";
+          document.querySelector(".menu .track_link").style.pointerEvents =
+            "none";
+        }
+      });
+  } else {
+    anime
+      .timeline({
+        easing: "easeOutExpo"
+      })
+      .add({
+        targets: ".menu .track_sub",
+        opacity: [1, 0],
+        translateX: "40px",
+        complete: () => {
+          document.querySelector(".track_sub").style.display = "none";
+          document.querySelector(".menu .track_link").style.pointerEvents =
+            "auto";
+        }
+      })
+      .add({
+        targets: ".menu .external",
+        opacity: [0, 1],
+        translateX: ["40px", 0],
+        begin: () => {
+          document.querySelector(".external").style.display = "block";
+        }
+      });
+  }
+};
+
+const subTeamAnimation = dir => {
+  if (dir) {
+    anime
+      .timeline({
+        easing: "easeOutExpo"
+      })
+      .add({
+        targets: ".menu .external",
+        opacity: [1, 0],
+        translateX: "40px",
+        complete: () => {
+          document.querySelector(".external").style.display = "none";
+        }
+      })
+      .add({
+        targets: ".menu .team_sub",
+        opacity: [0, 1],
+        translateX: ["40px", 0],
+        begin: () => {
+          document.querySelector(".team_sub").style.display = "block";
+          document.querySelector(".menu .team_link").style.pointerEvents =
+            "none";
+        }
+      });
+  } else {
+    anime
+      .timeline({
+        easing: "easeOutExpo"
+      })
+      .add({
+        targets: ".menu .team_sub",
+        opacity: [1, 0],
+        translateX: "40px",
+        complete: () => {
+          document.querySelector(".team_sub").style.display = "none";
+          document.querySelector(".menu .team_link").style.pointerEvents =
+            "auto";
+        }
+      })
+      .add({
+        targets: ".menu .external",
+        opacity: [0, 1],
+        translateX: ["40px", 0],
+        begin: () => {
+          document.querySelector(".external").style.display = "block";
+        }
+      });
+  }
 };
