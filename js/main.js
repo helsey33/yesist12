@@ -190,7 +190,7 @@ function WidthChange(mq) {
     const cmAnimation1 = () => {
       anime({
         targets:
-          "#committee .group1 .mem_container .member, .mem_container .details",
+          "#committee .members .mem_container .member, .mem_container .details",
         opacity: [0, 1],
         scale: [1.1, 1],
         easing: "easeOutExpo",
@@ -201,28 +201,28 @@ function WidthChange(mq) {
     };
 
     var committeeWaypoint1 = new Waypoint({
-      element: document.querySelector(".group1"),
+      element: document.querySelector(".members"),
       handler: cmAnimation1,
       offset: "50%"
     });
 
-    const cmAnimation2 = () => {
-      anime({
-        targets: "#committee .group2 .mem_container .member",
-        opacity: [0, 1],
-        scale: [1.1, 1],
-        easing: "easeOutExpo",
-        duration: 1000,
-        delay: anime.stagger(100)
-      });
-      committeeWaypoint2.disable();
-    };
+    // const cmAnimation2 = () => {
+    //   anime({
+    //     targets: "#committee .group2 .mem_container .member",
+    //     opacity: [0, 1],
+    //     scale: [1.1, 1],
+    //     easing: "easeOutExpo",
+    //     duration: 1000,
+    //     delay: anime.stagger(100)
+    //   });
+    //   committeeWaypoint2.disable();
+    // };
 
-    var committeeWaypoint2 = new Waypoint({
-      element: document.querySelector(".group2"),
-      handler: cmAnimation2,
-      offset: "50%"
-    });
+    // var committeeWaypoint2 = new Waypoint({
+    //   element: document.querySelector(".group2"),
+    //   handler: cmAnimation2,
+    //   offset: "50%"
+    // });
 
     const ctAnimation = () => {
       anime({
